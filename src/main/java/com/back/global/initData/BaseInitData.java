@@ -18,6 +18,7 @@ public class BaseInitData {
     public ApplicationRunner baseInitDataRunner (){
         return args->{
             work1();
+            work2();
         };
     }
 
@@ -31,6 +32,13 @@ public class BaseInitData {
                 Post post = postService.create(title, content, author);
                 log.debug("Created Post: {}", post);
             }
+        }
+    }
+
+    private void work2() {
+        log.debug("기존 Psot 전체 조회");
+        for(Post post : postService.findAll()) {
+            log.debug("Existing Post: {}", post);
         }
     }
 }
