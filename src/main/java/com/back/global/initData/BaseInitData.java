@@ -48,8 +48,8 @@ public class BaseInitData {
     private void work3(){
         log.debug("Post 단건 조회");
         for (Post post : postService.findAll()) {
-            Post postRow = postService.findById(post.getId()).get();
-            log.debug("조회된 Post: {}", postRow);
+            Post fetchedPost = postService.findById(post.getId());
+            log.debug("조회된 Post: {}", fetchedPost);
         }
     }
 }
