@@ -1,0 +1,11 @@
+services:
+  elasticsearch:
+    build: src/main/java
+    image: elasticsearch:nori
+    ports:
+      - "9200:9200"
+    environment:
+      # 단일 노드 모드 :
+      - discovery.type=single-node
+      # 보안 기능 비활성화 :
+      - xpack.security.enabled=false

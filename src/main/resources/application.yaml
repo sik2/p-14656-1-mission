@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: back
+  output:
+    ansi:
+      enabled: ALWAYS
+  elasticsearch:
+    uris: localhost:9200
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  profiles:
+    active: dev
+logging:
+  level:
+    com:
+      back: debug
+server:
+  port: 8080
