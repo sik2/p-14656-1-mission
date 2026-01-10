@@ -1,0 +1,13 @@
+services:
+  elasticsearch:
+    build: .
+    image: elasticsearch:nori
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+
+
+# docker compose로 elasticsearch를 띄우는 설정
+#elasticsearch라는 이름에 nori(한국어 형태소 분석기) 태그
