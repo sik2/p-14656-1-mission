@@ -1,0 +1,6 @@
+spring:
+  elasticsearch:
+    uris:
+      - localhost:9200
+
+# localhost:9200으로 Elasticsearch 연결 주소 설정
