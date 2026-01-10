@@ -4,6 +4,9 @@ spring:
   output:
     ansi:   # 콘솔 색상 출력 설정 (INFO>초록, ERROR>빨강)
       enabled: ALWAYS
+  jackson:  # 빈 객체를 json으로 직렬화할 때 예외 발생X
+    serialization:
+      fail-on-empty-beans: false
 logging:  # 로그 레벨 설정
   level:  #TRACE < DEBUG < INFO < WARN < ERROR
     com:  # debug 이상 로그 전부 출력
