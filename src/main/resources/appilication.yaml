@@ -1,6 +1,8 @@
 spring:
   application:
     name: back
+  profiles: # 기본 프로필을 dev로 설정
+    active: dev
   output:
     ansi:   # 콘솔 색상 출력 설정 (INFO>초록, ERROR>빨강)
       enabled: ALWAYS
