@@ -10,7 +10,7 @@ description = "p-14656-1"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -21,6 +21,13 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
+
+    runtimeOnly("org.springframework.boot:spring-boot-docker-compose")
+
+    compileOnly("org.projectlombok:lombok")
+
+    annotationProcessor("org.projectlombok:lombok")
+
     testImplementation("org.springframework.boot:spring-boot-starter-data-elasticsearch-test")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
